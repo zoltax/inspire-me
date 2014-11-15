@@ -26,7 +26,7 @@ angular.module('myApp.products', ['ngRoute'])
 
     $scope.loadProducts = function () {
         productService.getData('products').then(function (data) {
-
+                console.log(data);
                 //For future paging ;)
                 if (data.length < 5) {
                     $scope.dataAvailable = false;

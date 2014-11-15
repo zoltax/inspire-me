@@ -4,14 +4,28 @@ myApp.factory('productService', function ($http, $q) {
         return {
             getData: function (route, param) {
                 var defer = $q.defer();
-                $http.get('http://api.inspire-me.dev:8000/' + route).success(function (data) {
-                        defer.resolve(data);
-                    }
-                ).error(function () {
-                        defer.reject('An error has occurred :(');
-                    }
-                );
-                return defer.promise;
+
+                if (typeof param ==='undefined') {
+                    $http.get('http://api.inspire-me.dev:8000/' + route).success(function (data) {
+                            defer.resolve(data);
+                        }
+                    ).error(function () {
+                            defer.reject('An error has occurred :(');
+                        }
+                    );
+                    return defer.promise;
+                } else {
+                    $http.get('http://api.inspire-me.dev:8000/' + route + '/'+param).success(function (data) {
+                            defer.resolve(data);
+                        }
+                    ).error(function () {
+                            defer.reject('An error has occurred :(');
+                        }
+                    );
+                    return defer.promise;                    
+                }
+                
+
             },
             postData: function (data) {
                 var defer = $q.defer();
