@@ -27,10 +27,14 @@ myApp.factory('productService', function ($http, $q) {
                 
 
             },
-            postData: function (data) {
+            postData: function (route, data) {
+                console.log(route);
+                console.log('postData');
+                console.log(data);
+                //alert('test');
                 var defer = $q.defer();
-                data = $.param(data);
-                $http.post('http://localhost:8000/api/products/', data,
+                //data = $.param(data);
+                $http.post('http://api.inspire-me.dev:8000/'+route, data,
                     {'headers': {
                         'Content-Type': 'application/x-www-form-urlencoded,charset=UTF-8'
                     }}).

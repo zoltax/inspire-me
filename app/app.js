@@ -8,7 +8,9 @@ angular.module('myApp', [
   'myApp.view2',
   'myApp.home',
   'myApp.products',    
-  'myApp.version'
+  'myApp.version',
+  'ui.grid',
+  'ui.grid.edit'  
 ]).
 config(['$routeProvider', function($routeProvider) {
   	$routeProvider.

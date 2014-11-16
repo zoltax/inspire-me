@@ -1,13 +1,14 @@
-<p> products yaa </p>
 
-<h1>Products</h1>
-
-
+<h1>Products</h1>	<a ng-href='#/products/add'> Dodaj <i class='fa fa-plus'> </i> </a>
 <poll-alert show-alert="alert.showAlert" alert-class="alert.alertClass" alert-message="alert.msg"></poll-alert>
-<div class="list-group">
+<!-- <div class="list-group">
     <a class="list-group-item" ng-repeat="product in products" ng-href="#/products/view/{{product.id}}">{{product.name}}</a> 
     <a class="btn btn-success btn-block" ng-show="dataAvailable" ng-click="loadProducts()">Load more products</a>
     <div class="alert alert-danger" ng-hide="dataAvailable">
         <p>No More Data to Load :(</p>
     </div>
-</div>
+</div> -->
+
+
+
+<div class="gridStyle" ui-grid="{ data: products } " ui-grid-edit></div>

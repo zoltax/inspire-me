@@ -1,1 +1,61 @@
-<p> here we will be adding products </p>
+<im-alert show-alert="alert.showAlert" alert-class="alert.alertClass" alert-message="alert.msg"></im-alert>
+<form name='product-form' class='product-add-form'>
+  <fieldset>
+      <legend> Add Product </legend>
+      <div>
+          <label for='product_name'> Name </label>
+          <input type="text" id='product_name' ng-model="product.name" placeholder='Enter Product Name' />
+      </div>
+
+      <div>
+          <label for='product_brand'> Brand </label>
+          <input type="text" id='product_brand' ng-model="product.brand"  placeholder='Enter Product Brand'/>
+      </div>
+
+      <div>
+          <label for='product_desc'> Description </label>
+          <input type="text" id='product_desc' ng-model="product.description"  placeholder='Enter Product Description'/></input>
+      </div>
+
+      <div>
+          <label for='product_capacity'> Capacity </label>
+          <input type="number" step='any' min='0' id='product_capacity' ng-model="product.capacity" placeholder='Typical Capacity'/>
+      </div>
+
+
+
+      <div>
+          <label for='product_kcal'> Kcal / 100g </label>
+          <input type="number" step='any' min='0' id='product_kcal' ng-model="product.kcal" placeholder='Kcalories in 100g'/>
+      </div>
+      <div>
+          <label for='product_fibre'> Protein / 100g </label>
+          <input type="number" step='any' min='0' id='product_fibre' ng-model="product.protein" placeholder='Protein in 100g'/>
+      </div>
+      <div>
+          <label for='product_fat'> Fat / 100g </label>
+          <input type="number" step='any' min='0' id='product_fat' ng-model="product.fat" placeholder='Fat in 100g'/>
+      </div>
+      <div>
+          <label for='product_saturated_fat'> Saturated Fat / 100g </label>
+          <input type="number" step='any' min='0' id='product_saturated_fat' ng-model="product.saturated_fat" placeholder='Fat saturetes in 100g'/>
+      </div>
+      <div>
+          <label for='product_carb'> Carbs / 100g </label>
+          <input type="number" step='any' min='0' id='product_carb' ng-model="product.carb" placeholder='Carbohydrates in 100g'/>
+      </div>        
+      <div>
+          <label for='product_sugar'> Sugar / 100g </label>
+          <input type="number" step='any' min='0' id='product_sugar' ng-model="product.sugar" placeholder='Carbohydrates in 100g'/>
+      </div>             
+      <div>
+          <label for='product_fibre'> Fibre / 100g </label>
+          <input type="number" step='any' min='0' id='product_fibre' ng-model="product.fibre"  placeholder='Fibre in 100g'/>
+      </div>
+      <div>
+          <label for='product_price'> Price in &euro;</label>
+          <input type="number" step='any' min='0' id='product_price' ng-model="product.price" placeholder='Enter Product Price'/>  
+      </div>      
+  <button ng-click="save()">SAVE</button><button ng-click="populate()">populate (Red Thunder)</button>
+  </fieldset>
+</form>

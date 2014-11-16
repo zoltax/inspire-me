@@ -1,5 +1,7 @@
 /* app css stylesheet */
 
+
+
 .menu {
   list-style: none;
   border-bottom: 0.1em solid black;
@@ -27,4 +29,23 @@
 .menu > li:nth-child(1):before {
   content: "";
   padding: 0;
+}
+
+form.product-add-form  {
+  margin:2.5%;
+}
+
+form legend {
+  margin-bottom: 0%;
+}
+
+form.product-add-form label {
+  display:inline-block;
+  width:12.5%;
+  text-align: right;
+}
+
+.ui-grid {
+  margin:5%;
+  width:90%;
 }

@@ -1,4 +1,4 @@
-myApp.directive('productAlert', function () {
+myApp.directive('imAlert', function () {
     return {
         restrict: 'E',
         scope: {
@@ -17,3 +17,34 @@ myApp.directive('productAlert', function () {
         }
     };
 });
+// directive('formInput', function () {
+//     return {
+//         restrict: 'E',
+//         scope: {
+//             inputName: '=',
+//             inputModel : '=',
+//             inputLabel: '=',
+//             inputType: '='
+//         },
+//         templateUrl: 'partials/form-input.html'
+
+//     };
+// });
+//console.log('product-directives');
+angular.module('myApp.products.product-directive', []);
+
+
+// .directive('formInput',function () {
+//     return {
+//         restrict: 'E',
+//         scope: {
+//             inputName: '@',
+//             inputModel : '=',
+//             inputLabel: '@',
+//             inputType: '@'
+//         },
+//         templateUrl: '/components/product/partials/form-input.html'
+
+//     };
+// }
+// );
