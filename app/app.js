@@ -10,7 +10,8 @@ angular.module('myApp', [
   'myApp.products',    
   'myApp.version',
   'ui.grid',
-  'ui.grid.edit'  
+  'ui.grid.edit',
+  'ui.grid.resizeColumns'    
 ]).
 config(['$routeProvider', function($routeProvider) {
   	$routeProvider.

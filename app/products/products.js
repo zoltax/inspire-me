@@ -33,11 +33,19 @@ angular.module('myApp.products', [
 
     $scope.gridOptions = {
         columnDefs: [
-          {field: 'id', displayName: 'asdf'},
-          {field: 'name', displayName: 'asdfa'},
-          {displayName: 'Edit', cellTemplate: '<button id="editBtn" type="button" class="btn-small" >Edit</button> '}
+          //{field: 'id', displayName: 'asdf'},
+          {field: 'name', displayName: 'Name'},
+          {field: 'brand', displayName: 'Brand'},          
+          {field: 'kcal', displayName: 'Kcal'},
+          {field: 'carb', displayName: 'Carb'},
+          {field: 'sugar', displayName: 'Sugar'},          
+          {field: 'fat', displayName: 'Fat'},
+          {field: 'protein', displayName: 'Protein'},                              
+          {field: 'fibre', displayName: 'Fibre'},
+          {field: 'capacity', displayName: 'Capacity'},
+          {field: 'price', displayName: 'Price'},
         ],
-
+        data : {}
     };
 
     $scope.loadProducts = function () {
@@ -48,9 +56,10 @@ angular.module('myApp.products', [
                     $scope.dataAvailable = false;
                 }
                 angular.forEach(data, function (value) {
-                    $scope.products.push(value);
-                   
+                    $scope.products.push(value);  
                 });
+
+                $scope.gridOptions.data = $scope.products;
 
                 pageNumber++;
             },
@@ -100,6 +109,7 @@ angular.module('myApp.products', [
     $scope.product = {};
 
     
+
     $scope.save = function () {
 
         console.log($scope.product);
